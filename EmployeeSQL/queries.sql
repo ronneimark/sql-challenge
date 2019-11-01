@@ -64,11 +64,3 @@ SELECT last_name, count(last_name)
 FROM employees
 GROUP BY last_name
 ORDER BY count(last_name) ASC;
-
---Create a query of average salary by title to import to pandas to create barchart in matplotlib.
-
-SELECT t.title, avg(s.salary)
-FROM salaries s
-JOIN titles t
-ON s.emp_no = t.emp_no
-GROUP BY t.title;
