@@ -16,18 +16,18 @@ ORDER BY hire_date ASC;
 
 SELECT m.emp_no, e.last_name, e.first_name, m.from_date, m.to_date, m.dept_no, d.dept_name
 FROM dept_manager m
-LEFT JOIN departments d
+JOIN departments d
 ON m.dept_no = d.dept_no
-LEFT JOIN employees e
+JOIN employees e
 ON m.emp_no = e.emp_no;
 
 --List the department of each employee with the following information: employee number, last name, first name, and department name.
 
 SELECT e.emp_no, e.last_name, e.first_name, d.dept_name
 FROM employees e
-LEFT JOIN dept_emp j
+JOIN dept_emp j
 ON e.emp_no = j.emp_no
-LEFT JOIN departments d
+JOIN departments d
 ON j.dept_no = d.dept_no;
 
 --List all employees whose first name is "Hercules" and last names begin with "B."
@@ -42,9 +42,9 @@ ORDER BY last_name ASC;
 
 SELECT e.emp_no, e.last_name, e.first_name, d.dept_name
 FROM employees e
-LEFT JOIN dept_emp j
+JOIN dept_emp j
 ON e.emp_no = j.emp_no
-LEFT JOIN departments d
+JOIN departments d
 ON j.dept_no = d.dept_no
 WHERE d.dept_name = 'Sales';
 
@@ -52,9 +52,9 @@ WHERE d.dept_name = 'Sales';
 
 SELECT e.emp_no, e.last_name, e.first_name, d.dept_name
 FROM employees e
-LEFT JOIN dept_emp j
+JOIN dept_emp j
 ON e.emp_no = j.emp_no
-LEFT JOIN departments d
+JOIN departments d
 ON j.dept_no = d.dept_no
 WHERE d.dept_name IN  ('Sales', 'Development');
 
