@@ -44,3 +44,11 @@ CREATE  TABLE dept_manager (
 	to_date              date  NOT NULL
 );
 
+
+ALTER TABLE salaries ADD PRIMARY KEY (emp_no,from_date);
+
+ALTER TABLE titles ADD PRIMARY KEY (emp_no,from_date);
+
+ALTER TABLE dept_emp ADD PRIMARY KEY (emp_no,dept_no, from_date);
+
+ALTER TABLE dept_manager ADD PRIMARY KEY (emp_no,dept_no,from_date);
